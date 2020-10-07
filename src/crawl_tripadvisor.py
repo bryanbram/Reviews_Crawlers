@@ -15,15 +15,23 @@ import re
 import time
 import math
 from bs4 import BeautifulSoup
-from misc import save_as_pickle
 from tqdm import tqdm
 import logging
+import os
+import pickle
+
+def save_as_pickle(filename, data):
+    completeName = os.path.join("./data/",\
+                                filename)
+    with open(completeName, 'wb') as output:
+        pickle.dump(data, output)
+        
 
 logging.basicConfig(format='%(asctime)s [%(levelname)s]: %(message)s', \
                     datefmt='%m/%d/%Y %I:%M:%S %p', level=logging.INFO)
 logger = logging.getLogger('__file__')
         
-def crawl_tripadvisor_reviews(search_query="changi+city+point", num_reviews=100):
+def crawl_tripadvisor_reviews(search_query="keong+saik+bakery", num_reviews=400):
     logger.info("Initialzing webdriver...")
     driver = webdriver.Chrome()
     timeout = 13

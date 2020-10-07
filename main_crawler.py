@@ -16,7 +16,7 @@ logger = logging.getLogger('__file__')
 
 if __name__ == "__main__":
     parser = ArgumentParser()
-    parser.add_argument("--search_query", type=str, default="changi+city+point", help="Search query")
+    parser.add_argument("--search_query", type=str, default="keong+saik+bakery", help="Search query")
     parser.add_argument("--mode", type=str, default="google_reviews", \
                         help="Options: google_reviews, tripadvisor, facebook_posts")
     parser.add_argument("--num_results", type=int, default=6000, help="Number of results to return.")

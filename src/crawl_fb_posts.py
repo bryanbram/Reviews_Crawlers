@@ -30,8 +30,8 @@ with open(user_txt_path, 'r', encoding='utf8') as f:
     username = f.readline()
     password = f.readline()
 
-url = 'https://www.facebook.com/pg/ChannelNewsAsia/posts/?ref=page_internal'
-keywords = ['coronavirus', 'covid', 'covid-19']
+url = 'https://www.facebook.com/keongsaikbakery/'
+keywords = ['good', 'bad']
 
 driver = webdriver.Chrome()
 driver.get(url)
